@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #effff5;
+}
+
+.navbar {
+    width: 100%;
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.navbar ul {
+    list-style: none;
+    margin-left: 40px;
+}
+
+.navbar li {
+    display: inline-block;
+    margin: 0 60px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #2a6d69;
+    font-weight: bold;
+}
+
+.navbar li:last-child {
+    margin-right: 0;
+}
+
+.contact-phone {
+    position: absolute;
+    right: 80px;
+    top: 20px;
+    color: #00b074;
+    font-weight: bold;
+}
+
+.telefono {
+    margin-bottom: -18px;
+    width: 30px;
+}
+
+.number {
+    margin-left: 40px;
+    margin-top: -15px;
+}
+
+/* BARRA LATERAL IZQUIERDA */
+
+.barlateralizq {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100vh;
+    background-color: #01504d;
+    z-index: 1;
+}
+
+.barlateralizq ul {
+    width: 100%;
+    text-align: center;
+    list-style: none;
+}
+
+.barlateralizq ul.arriba {
+    position: absolute;
+    top: 20px;
+}
+
+.barlateralizq ul.abajo {
+    position: absolute;
+    bottom: 20px;
+}
+
+.barlateralizq li {
+    margin: 20px 0;
+}
+
+.barlateralizq img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.barlateralizq img:hover {
+    transform: scale(1.2);
+}
+
+/* Contenedor principal */
+.container {
+    width: 1100px; /* Asegura que ocupe todo el ancho disponible */
+    overflow: hidden; /* Evita que los elementos flotantes se desborden */
+    position: relative; /* Necesario para posicionar elementos hijos absolutamente */
+    height: 490px;
+    margin: 20px auto;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 40px;
+}
+
+/* SECCIÓN IZQUIERDA */
+
+.izquierda {
+    float: left; /* Alinea el contenedor a la izquierda */
+    width: 50%; /* Ocupa el 50% del ancho del contenedor padre */
+    height: 100%; /* Asegura que ocupe todo el alto disponible */
+    position: relative; /* Necesario para posicionar elementos hijos absolutamente */
+}
+
+.izquierda .img-dentista {
+    position: absolute; /* Posiciona la imagen dentro del contenedor */
+    top: 0;
+    left: 0;
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: 100%; /* La imagen ocupa todo el alto del contenedor */
+    object-fit: cover; /* Ajusta la imagen para cubrir el área sin deformarse */
+    z-index: 1; /* Coloca la imagen detrás del contenido superpuesto */
+    filter: brightness(0.7) sepia(1) hue-rotate(90deg) saturate(2) opacity(0.9); /* Aplica un filtro verdoso con transparencia */
+    
+}
+
+/* Superposición del contenido */
+.izquierda h1,
+.izquierda p,
+.izquierda .buttons {
+    position: absolute; /* Superpone los elementos sobre la imagen */
+    z-index: 2; /* Asegura que estén por encima de la imagen */
+    color: white; /* Cambia el color del texto para que sea visible sobre la imagen */
+    text-align: center; /* Centra el texto horizontalmente */
+    width: 100%; /* Asegura que ocupen todo el ancho del contenedor */
+}
+
+.izquierda h1 {
+    margin-left: 30px; /* Ajusta la posición horizontal del título */
+    text-align: justify;
+    top: 20%; /* Ajusta la posición vertical del título */
+    font-size: 2rem;
+}
+
+
+.izquierda p {
+    text-align: justify;
+    top: 50%; /* Ajusta la posición vertical del párrafo */
+    left: 5px; /* Alinea horizontalmente con el h1 */
+    font-size: 1rem;
+    color: white; /* Asegura que el texto sea visible sobre la imagen */
+    padding: 0 20px; /* Mantén el espacio lateral si es necesario */
+    width: calc(100% - 60px); /* Ajusta el ancho para que no se desborde */
+}
+
+.buttons {
+    position: absolute; /* Posiciona el contenedor de forma absoluta */
+    bottom: 80px; /* Lo coloca en el fondo del contenedor padre */
+    left: -120px; /* Alinea el contenedor al lado izquierdo */
+    width: 100%; /* Asegura que ocupe todo el ancho del contenedor padre */
+
+}
+
+.btnprimary{
+    text-align: center;
+    border-radius: 20px;
+    background-color: #00b074;
+    height: 40px;
+    width: 100px;
+    border:none;
+    text-decoration: none;
+}
+
+.btnsecondary{
+    text-align: center;
+    border-radius: 20px;
+    background-color: #00b074;
+    height: 40px;
+    width: 100px;
+
+    text-decoration: none;
+    border:none;
+}
+
+/* SECCIÓN DERECHA */
+
+.derecha {
+    float: right; /* Alinea el contenedor a la derecha */
+    width: 50%; /* Ocupa el 50% del ancho del contenedor padre */
+    height: 100%; /* Asegura que ocupe todo el alto disponible */
+    padding: 40px; /* Mantén el padding existente */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+.derecha h2 {
+    color: #00b074;
+    margin-bottom: 30px;
+}
+
+form {
+    width: 100%;
+}
+
+input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* REEMPLAZO DE .form-group CON FLOAT */
+
+.form-group::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.form-group input {
+    width: 48%;
+    float: left;
+}
+
+.form-group input:first-child {
+    margin-right: 4%;
+}
