@@ -1,3 +1,4 @@
+/* RESETEO Y CONFIGURACIÓN GENERAL */
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +10,7 @@ body {
     background-color: #effff5;
 }
 
+/* NAVBAR SUPERIOR */
 .navbar {
     width: 100%;
     padding: 30px;
@@ -26,14 +28,14 @@ body {
     margin: 0 60px;
 }
 
+.navbar li:last-child {
+    margin-right: 0;
+}
+
 .navbar a {
     text-decoration: none;
     color: #2a6d69;
     font-weight: bold;
-}
-
-.navbar li:last-child {
-    margin-right: 0;
 }
 
 .contact-phone {
@@ -55,7 +57,6 @@ body {
 }
 
 /* BARRA LATERAL IZQUIERDA */
-
 .barlateralizq {
     position: fixed;
     top: 0;
@@ -97,105 +98,93 @@ body {
     transform: scale(1.2);
 }
 
-/* Contenedor principal */
+/* CONTENEDOR PRINCIPAL */
 .container {
-    width: 1100px; /* Asegura que ocupe todo el ancho disponible */
-    overflow: hidden; /* Evita que los elementos flotantes se desborden */
-    position: relative; /* Necesario para posicionar elementos hijos absolutamente */
+    width: 1100px;
     height: 490px;
     margin: 20px auto;
     background: #ffffff;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 40px;
+    overflow: hidden;
+    position: relative;
 }
 
 /* SECCIÓN IZQUIERDA */
-
 .izquierda {
-    float: left; /* Alinea el contenedor a la izquierda */
-    width: 50%; /* Ocupa el 50% del ancho del contenedor padre */
-    height: 100%; /* Asegura que ocupe todo el alto disponible */
-    position: relative; /* Necesario para posicionar elementos hijos absolutamente */
+    float: left;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    background-color: #396969; /* Un verde similar al resultado del filtro */
+    z-index: 1;
+
 }
 
 .izquierda .img-dentista {
-    position: absolute; /* Posiciona la imagen dentro del contenedor */
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
-    height: 100%; /* La imagen ocupa todo el alto del contenedor */
-    object-fit: cover; /* Ajusta la imagen para cubrir el área sin deformarse */
-    z-index: 1; /* Coloca la imagen detrás del contenido superpuesto */
-    filter: brightness(0.7) sepia(1) hue-rotate(90deg) saturate(2) opacity(0.9); /* Aplica un filtro verdoso con transparencia */
-    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
 }
 
 /* Superposición del contenido */
 .izquierda h1,
 .izquierda p,
 .izquierda .buttons {
-    position: absolute; /* Superpone los elementos sobre la imagen */
-    z-index: 2; /* Asegura que estén por encima de la imagen */
-    color: white; /* Cambia el color del texto para que sea visible sobre la imagen */
-    text-align: center; /* Centra el texto horizontalmente */
-    width: 100%; /* Asegura que ocupen todo el ancho del contenedor */
+    position: absolute;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    width: 100%;
 }
 
 .izquierda h1 {
-    margin-left: 30px; /* Ajusta la posición horizontal del título */
+    top: 20%;
+    margin-left: 30px;
     text-align: justify;
-    top: 20%; /* Ajusta la posición vertical del título */
     font-size: 2rem;
+    color: #b6b6b6;
 }
 
-
 .izquierda p {
-    text-align: justify;
-    top: 50%; /* Ajusta la posición vertical del párrafo */
-    left: 5px; /* Alinea horizontalmente con el h1 */
+    top: 50%;
+    left: 5px;
     font-size: 1rem;
-    color: white; /* Asegura que el texto sea visible sobre la imagen */
-    padding: 0 20px; /* Mantén el espacio lateral si es necesario */
-    width: calc(100% - 60px); /* Ajusta el ancho para que no se desborde */
+    text-align: justify;
+    padding: 0 20px;
+    width: calc(100% - 60px);
+    color:#e6e6e6
 }
 
 .buttons {
-    position: absolute; /* Posiciona el contenedor de forma absoluta */
-    bottom: 80px; /* Lo coloca en el fondo del contenedor padre */
-    left: -120px; /* Alinea el contenedor al lado izquierdo */
-    width: 100%; /* Asegura que ocupe todo el ancho del contenedor padre */
-
+    bottom: 80px;
+    left: -120px;
+    width: 100%;
 }
 
-.btnprimary{
+/* Botones */
+.btnprimary,
+.btnsecondary {
     text-align: center;
     border-radius: 20px;
     background-color: #00b074;
     height: 40px;
     width: 100px;
-    border:none;
+    border: none;
     text-decoration: none;
-}
-
-.btnsecondary{
-    text-align: center;
-    border-radius: 20px;
-    background-color: #00b074;
-    height: 40px;
-    width: 100px;
-
-    text-decoration: none;
-    border:none;
 }
 
 /* SECCIÓN DERECHA */
-
 .derecha {
-    float: right; /* Alinea el contenedor a la derecha */
-    width: 50%; /* Ocupa el 50% del ancho del contenedor padre */
-    height: 100%; /* Asegura que ocupe todo el alto disponible */
-    padding: 40px; /* Mantén el padding existente */
-    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    float: right;
+    width: 50%;
+    height: 100%;
+    padding: 40px;
+    box-sizing: border-box;
 }
 
 .derecha h2 {
@@ -203,6 +192,7 @@ body {
     margin-bottom: 30px;
 }
 
+/* FORMULARIO */
 form {
     width: 100%;
 }
@@ -215,8 +205,7 @@ input {
     margin-bottom: 15px;
 }
 
-/* REEMPLAZO DE .form-group CON FLOAT */
-
+/* Grupo de campos en línea */
 .form-group::after {
     content: "";
     display: table;
