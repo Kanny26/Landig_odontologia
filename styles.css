@@ -18,18 +18,19 @@ body {
     z-index: 1;
 }
 
+.navbar__nav{
+    width: 100%;
+    text-align: left;
+}
 .navbar__list {
     list-style: none;
+    display: inline-block;
     margin-left: 40px;
 }
 
 .navbar__item {
     display: inline-block;
-    margin: 0 60px;
-}
-
-.navbar__item:last-child {
-    margin-right: 0;
+    margin: 0 40px;
 }
 
 .navbar__link {
@@ -43,25 +44,25 @@ body {
 }
 
 .navbar__phone {
-    position: absolute;
-    right: 80px;
-    top: 20px;
-    color: #00b074;
+    display: inline-block;
+    margin-top: -10px;
+    color:#00b074;
     font-weight: bold;
 }
 
 .navbar__icon {
-    margin-bottom: -18px;
+    margin-right: 10px;
     width: 30px;
 }
 
 .navbar__number {
-    margin-left: 40px;
-    margin-top: -15px;
+    display: inline-block;
+    font-size: 1.2rem;
+    color: #2a6d69;
 }
 
 /* BARRA LATERAL IZQUIERDA */
-.barlateralizq {
+.sidebar {
     position: fixed;
     top: 0;
     left: 0;
@@ -69,36 +70,37 @@ body {
     height: 100vh;
     background-color: #01504d;
     z-index: 1;
-}
-
-.barlateralizq ul {
-    width: 100%;
     text-align: center;
+}
+
+.sidebar__top,
+.sidebar__bottom {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.barlateralizq ul.arriba {
-    position: absolute;
-    top: 20px;
+.sidebar__top {
+    margin-top: 20px;
 }
 
-.barlateralizq ul.abajo {
+.sidebar__bottom {
     position: absolute;
     bottom: 20px;
+    width: 100%;
 }
 
-.barlateralizq li {
+.sidebar__icon {
     margin: 20px 0;
 }
 
-.barlateralizq img {
+.sidebar__icon img {
     width: 30px;
     height: 30px;
     cursor: pointer;
     transition: transform 0.3s;
 }
-
-.barlateralizq img:hover {
+.sidebar__icon img:hover {
     transform: scale(1.2);
 }
 
@@ -111,21 +113,20 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 40px;
     overflow: hidden;
-    position: relative;
 }
 
 /* SECCIÓN IZQUIERDA */
-.izquierda {
+.left__content {
     float: left;
     width: 50%;
     height: 100%;
     position: relative;
     background-color: #396969; /* Un verde similar al resultado del filtro */
-    z-index: 1;
+    color: white;
 
 }
 
-.izquierda .img-dentista {
+.content__image {
     position: absolute;
     top: 0;
     left: 0;
@@ -133,57 +134,65 @@ body {
     height: 100%;
     object-fit: cover;
     z-index: 1;
+    opacity: 0.4;
 }
 
-/* Superposición del contenido */
-.izquierda h1,
-.izquierda p,
-.izquierda .buttons {
+.content__title {
     position: absolute;
-    z-index: 2;
-    color: white;
-    text-align: center;
-    width: 100%;
-}
-
-.izquierda h1 {
     top: 20%;
-    margin-left: 30px;
-    text-align: justify;
+    left: 30px;
     font-size: 2rem;
-    color: #b6b6b6;
+    z-index: 2;
+    color: #ffffff;
 }
 
-.izquierda p {
+.content__text {
+    position: absolute;
     top: 50%;
-    left: 5px;
+    left: 30px;
+    right: 30px;
+    z-index: 2;
     font-size: 1rem;
     text-align: justify;
-    padding: 0 20px;
-    width: calc(100% - 60px);
-    color:#e6e6e6
+    color: #e6e6e6;
 }
 
-.buttons {
-    bottom: 80px;
-    left: -120px;
-    width: 100%;
-}
-
-/* Botones */
-.btnprimary,
-.btnsecondary {
-    text-align: center;
+.content__button {
+    display: inline-block;
     border-radius: 20px;
     background-color: #00b074;
+    color: white;
     height: 40px;
-    width: 100px;
+    width: 140px;
     border: none;
-    text-decoration: none;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    z-index: 2;
 }
 
+.content__button--secondary {
+    background-color: transparent;
+    color: #00b074;
+    border: 2px solid #00b074;
+}
+
+.content__button:hover {
+    background-color: #019264;
+}
+
+.content__button--secondary:hover {
+    background-color: #00b074;
+    color: white;
+}
+
+
+
+
 /* SECCIÓN DERECHA */
-.derecha {
+.right__form {
     float: right;
     width: 50%;
     height: 100%;
@@ -191,7 +200,7 @@ body {
     box-sizing: border-box;
 }
 
-.derecha h2 {
+.form__title {
     color: #00b074;
     margin-bottom: 30px;
 }
@@ -223,4 +232,94 @@ input {
 
 .form-group input:first-child {
     margin-right: 4%;
+}
+
+.content__button--primary{
+    background-color: #00b074;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* ======= MEDIA QUERIES ======= */
+@media (max-width: 1024px) {
+  .container {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .left__content,
+  .right__form {
+    float: none;
+    width: 100%;
+    height: auto;
+  }
+
+  .content__title,
+  .content__text,
+  .content__buttons {
+    position: static;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .content__image {
+    position: relative;
+    height: 200px;
+    opacity: 0.3;
+  }
+
+  .form-group input {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+  }
+
+  .form__title {
+    text-align: center;
+  }
+
+  .navbar__item {
+    margin: 0 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px 10px;
+  }
+
+  .navbar__list {
+    display: block;
+    margin: 0;
+    text-align: center;
+  }
+
+  .navbar__item {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .navbar__phone {
+    display: block;
+    float: none;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .content__button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .content__buttons {
+    text-align: center;
+  }
 }
