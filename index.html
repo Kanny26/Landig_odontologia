@@ -8,62 +8,62 @@
 </head>
 <body>
 <header class="navbar">
-<nav>
-    <ul class="nav-list">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Services</a></li>
-    <li><a href="#">About Us</a></li>
-    <li><a href="#">Appointment</a></li>
-    <li><a href="#">Contact</a></li>
+<nav class="navbar__nav">
+    <ul class="navbar__list">
+    <li class="navbar__item"><a class="navbar__link navbar__link--active" href="#">Home</a></li>
+    <li class="navbar__item"><a class="navbar__link" href="#">Services</a></li>
+    <li class="navbar__item"><a class="navbar__link" href="#">About Us</a></li>
+    <li class="navbar__item"><a class="navbar__link" href="#">Appointment</a></li>
+    <li class="navbar__item"><a class="navbar__link" href="#">Contact</a></li>
     </ul>
-    <div class="contact-phone">
-    <img src="img/telefono.png" class="telefono"> 
-    <h3 class="number">(+605) 1234-56789</h3>
+    <div class="navbar__phone">
+    <img src="img/telefono.png" class="navbar__icon"> 
+    <h3 class="navbar__number">(+605) 1234-56789</h3>
     </div>
 </nav>
 </header>
 
-<div class="barlateralizq">
-<ul class="arriba">
-    <li><img src="img/casa.png" alt="Home"></li>
+<aside class="sidebar">
+<ul class="sidebar__top">
+    <li class="sidebar__icon"><img src="img/casa.png" alt="Home"></li>
 </ul>
-<ul class="abajo">
-    <li><img src="img/twitter.png" alt="Twitter"></li>
-    <li><img src="img/facebook.png" alt="Facebook"></li>
-    <li><img src="img/instagram.png" alt="Instagram"></li>
-    <li><img src="img/youtube.png" alt="YouTube"></li>
+<ul class="sidebar__bottom">
+    <li class="sidebar__icon"><img src="img/twitter.png" alt="Twitter"></li>
+    <li class="sidebar__icon"><img src="img/facebook.png" alt="Facebook"></li>
+    <li class="sidebar__icon"><img src="img/instagram.png" alt="Instagram"></li>
+    <li class="sidebar__icon"><img src="img/youtube.png" alt="YouTube"></li>
 </ul>
-</div>
+</aside>
 
 <main class="container">
-<div class="izquierda">
-    <img src="img/dentista.png" alt="Dentist" class="img-dentista" />
-    <h1>Full Dedicated To Your <br>
+<section class="left__content">
+    <img src="img/dentista.png" alt="Dentist" class="content__image" />
+    <h1 class="content__title">Full Dedicated To Your <br>
     <span>Dental Health.</span> </h1>
-    <p>
+    <p class="content__text">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo dolor ad, a omnis minima vitae saepe incidunt, ipsam ratione minus aliquam, voluptas animi odio.
-
     </p>
-    <div class="buttons">
-        <button class="btnprimary">Book now ▶</button>
-        <button class="btnsecondary">Read more ▶</button>
-    </div>
-</div>
+    <div class="content__buttons">
+        <button class="content__button content__button--primary">Book now ▶</button>
+        <button class="content__button content__button--secondary">Read more ▶</button>
 
-<div class="derecha">
-    <h2>Book an Appointment</h2>
+    </div>
+</section>
+
+<div class="right__form">
+    <h2 class="form__title">Book an Appointment</h2>
     <form>
     <div class="form-group">
-        <input type="text" placeholder="Your first name*" class="half" />
-        <input type="text" placeholder="Your last name*" class="half" />
+        <input type="text" placeholder="Your first name*" class="input_first" />
+        <input type="text" placeholder="Your last name*" class="input_last" />
     </div>
-    <input type="email" placeholder="Your email address*" />
-    <input type="tel" placeholder="Your contact no*" />
+    <input type="email" placeholder="Your email address*" class="input_email" />
+    <input type="tel" placeholder="Your contact no*" class="input_tel" />
     <div class="form-group">
-        <input type="date" class="half" />
-        <input type="time" class="half" />
+        <input type="date" class="input_date" />
+        <input type="time" class="input_time" />
     </div>
-    <button type="submit" class="btn btn-primary">Book now ▶</button>
+    <button type="submit" class="content__buttons content__button--primary">Book now ▶</button>
     </form>
 </div>
 </main>
