@@ -18,27 +18,31 @@ body {
     z-index: 1;
 }
 
-.navbar ul {
+.navbar__list {
     list-style: none;
     margin-left: 40px;
 }
 
-.navbar li {
+.navbar__item {
     display: inline-block;
     margin: 0 60px;
 }
 
-.navbar li:last-child {
+.navbar__item:last-child {
     margin-right: 0;
 }
 
-.navbar a {
+.navbar__link {
     text-decoration: none;
     color: #2a6d69;
     font-weight: bold;
 }
 
-.contact-phone {
+.navbar__link--active{
+    border-bottom: 2px solid #2a6d69;
+}
+
+.navbar__phone {
     position: absolute;
     right: 80px;
     top: 20px;
@@ -46,12 +50,12 @@ body {
     font-weight: bold;
 }
 
-.telefono {
+.navbar__icon {
     margin-bottom: -18px;
     width: 30px;
 }
 
-.number {
+.navbar__number {
     margin-left: 40px;
     margin-top: -15px;
 }
