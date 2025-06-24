@@ -220,3 +220,48 @@ input {
 .form-group input:first-child {
     margin-right: 4%;
 }
+
+@media (max-width: 720px) {
+
+    header {
+        width: 20px;
+        font-size: 5px;
+    }
+    .navbar {
+
+    width: 10px;
+    padding: 10px;
+    position: relative;
+    z-index: 1; }
+
+    .navbar ul {
+    font-size: 5px;
+    list-style: none;
+    margin-left: 10px; }
+
+    .navbar li {
+        display: inline-block;
+        margin: 0 20px; }
+
+    .navbar li:last-child {
+        margin-right: 0; }
+    
+    
+    .contact-phone {
+        position: absolute;
+        right: 40px;
+        top: 20px;
+        color: #00b074;
+        font-weight: bold;
+    }
+
+    .telefono {
+        margin-bottom: -18px;
+        width: 30px;
+    }
+
+    .number {
+        margin-left: 40px;
+        margin-top: -15px;
+    }
+}
